@@ -6,7 +6,6 @@ Summary:        Library to handle network protocol transport in X
 Url:            http://xorg.freedesktop.org/
 Group:          Development/Libraries/X11
 Source:         %{name}-%{version}.tar.bz2
-Patch0:         p_xauth.diff
 BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(xorg-macros) >= 1.12
 BuildArch:      noarch
