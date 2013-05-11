@@ -31,6 +31,7 @@ test -L usr/include/X11 && rm usr/include/X11
 exit 0
 
 %files
+%license COPYING
 %defattr(-,root,root)
 %doc %{_docdir}/xtrans/xtrans.xml
 %{_includedir}/X11/Xtrans/
