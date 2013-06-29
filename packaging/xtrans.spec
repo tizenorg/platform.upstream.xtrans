@@ -6,6 +6,7 @@ Summary:        Library to handle network protocol transport in X
 Url:            http://xorg.freedesktop.org/
 Group:          Development/Libraries/X11
 Source:         %{name}-%{version}.tar.bz2
+Source1001: 	xtrans.manifest
 BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(xorg-macros) >= 1.12
 BuildArch:      noarch
@@ -18,6 +19,7 @@ libX11, libICE, the X font server, and related components.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --docdir=%{_docdir}/xtrans
@@ -31,6 +33,7 @@ test -L usr/include/X11 && rm usr/include/X11
 exit 0
 
 %files
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %doc %{_docdir}/xtrans/xtrans.xml
