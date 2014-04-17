@@ -1,5 +1,5 @@
 Name:           xtrans
-Version:        1.2.7
+Version:        1.3.4
 Release:        0
 License:        MIT
 Summary:        Library to handle network protocol transport in X
@@ -22,7 +22,7 @@ libX11, libICE, the X font server, and related components.
 cp %{SOURCE1001} .
 
 %build
-%configure --docdir=%{_docdir}/xtrans
+%autogen --docdir=%{_docdir}/xtrans
 make %{?_smp_mflags}
 
 %install
