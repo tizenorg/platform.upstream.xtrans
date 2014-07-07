@@ -11,6 +11,10 @@ BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(xorg-macros) >= 1.12
 BuildArch:      noarch
 
+%if !%{with x}
+ExclusiveArch:
+%endif
+
 %description
 xtrans is a library of code that is shared among various X packages to
 handle network protocol transport in a modular fashion, allowing a
